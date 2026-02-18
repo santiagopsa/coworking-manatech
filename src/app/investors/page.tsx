@@ -123,7 +123,7 @@ export default function InvestorsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      <section className="bg-gradient-to-b from-firo-navy via-slate-900 to-slate-950 pb-20 pt-28 text-white">
+      <section className="bg-gradient-to-b from-firo-blue via-firo-blue to-firo-muted pb-20 pt-28 text-white">
         <Container>
           <div className="max-w-3xl">
             <div className="text-sm font-semibold text-firo-blue">Investors</div>

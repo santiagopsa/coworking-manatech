@@ -12,16 +12,16 @@ export default function Join({ locale = "en" }: JoinProps) {
         <div className="rounded-3xl border border-firo-line bg-firo-bg p-8 shadow-soft md:p-10">
           <div className="grid gap-8 md:grid-cols-2 md:items-start">
             <div>
-              <div className="text-sm font-semibold text-firo-blue">{isEs ? "Guia gratuita" : "Free guide"}</div>
+              <div className="text-sm font-semibold text-firo-blue">{isEs ? "Publica tu vacante" : "Post your role"}</div>
               <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
                 {isEs
-                  ? "Guia gratuita: Como defender tus candidatos sin entrar en discusiones subjetivas"
-                  : "Free guide: How to defend your candidates without subjective debates"}
+                  ? "Acceso exclusivo para empresas de Inspira"
+                  : "Exclusive access for Inspira companies"}
               </h2>
               <p className="mt-3 text-firo-muted">
                 {isEs
-                  ? "Un framework practico usado por reclutadores para presentar candidatos con claridad, datos y argumentos que los lideres si entienden."
-                  : "A practical framework recruiters use to present candidates with clarity, evidence, and arguments leaders can understand."}
+                  ? "Completa este formulario y nuestro equipo te contacta para activar tu publicacion, pruebas de filtrado y reportes por candidato."
+                  : "Complete this form and our team will help you activate your post, assessments, and candidate reports."}
               </p>
             </div>
 
@@ -31,7 +31,7 @@ export default function Join({ locale = "en" }: JoinProps) {
                 method="POST"
                 className="space-y-4"
               >
-                <input type="hidden" name="_subject" value="PeakU Guia gratuita para reclutadores" />
+                <input type="hidden" name="_subject" value="Inspira - solicitud para publicar vacante" />
                 <input type="hidden" name="_captcha" value="false" />
                 <input type="hidden" name="_template" value="table" />
 
@@ -45,6 +45,19 @@ export default function Join({ locale = "en" }: JoinProps) {
                     required
                     className="w-full rounded-xl border border-firo-line bg-white px-4 py-3 text-sm outline-none focus:border-firo-blue"
                     placeholder={isEs ? "Tu nombre completo" : "Your full name"}
+                  />
+                </div>
+
+                <div>
+                  <label className="mb-1 block text-sm font-medium text-firo-text" htmlFor="company">
+                    {isEs ? "Empresa" : "Company"}
+                  </label>
+                  <input
+                    id="company"
+                    name="company"
+                    required
+                    className="w-full rounded-xl border border-firo-line bg-white px-4 py-3 text-sm outline-none focus:border-firo-blue"
+                    placeholder={isEs ? "Nombre de tu empresa" : "Your company name"}
                   />
                 </div>
 
@@ -63,15 +76,15 @@ export default function Join({ locale = "en" }: JoinProps) {
                 </div>
 
                 <div>
-                  <label className="mb-1 block text-sm font-medium text-firo-text" htmlFor="phone">
-                    {isEs ? "Telefono" : "Phone"}
+                  <label className="mb-1 block text-sm font-medium text-firo-text" htmlFor="vacancy">
+                    {isEs ? "Cargo a publicar" : "Role to publish"}
                   </label>
                   <input
-                    id="phone"
-                    name="phone"
+                    id="vacancy"
+                    name="vacancy"
                     required
                     className="w-full rounded-xl border border-firo-line bg-white px-4 py-3 text-sm outline-none focus:border-firo-blue"
-                    placeholder={isEs ? "+57 300 000 0000" : "+1 (555) 000-0000"}
+                    placeholder={isEs ? "Ej: Desarrollador Full Stack" : "Ex: Full Stack Developer"}
                   />
                 </div>
 
@@ -79,7 +92,7 @@ export default function Join({ locale = "en" }: JoinProps) {
                   type="submit"
                   className="w-full rounded-xl bg-firo-blue px-5 py-3 text-sm font-semibold text-white hover:opacity-95"
                 >
-                  {isEs ? "Descargar ahora" : "Download now"}
+                  {isEs ? "Publicar oferta en PeakU" : "Post a role on PeakU"}
                 </button>
               </form>
             </div>
@@ -87,8 +100,8 @@ export default function Join({ locale = "en" }: JoinProps) {
 
           <div className="mt-6 text-xs text-firo-muted">
             {isEs
-              ? "Sin spam. Creado por personas que tambien han estado en tu lugar."
-              : "No spam. Built by people who have been in your position."}
+              ? "Te contactamos para validar tu perfil de empresa y activar la ruta exclusiva de publicacion en PeakU."
+              : "We will contact you to validate your company profile and activate the exclusive posting flow."}
           </div>
         </div>
       </Container>

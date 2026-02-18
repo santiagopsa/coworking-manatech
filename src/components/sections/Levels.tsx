@@ -7,53 +7,53 @@ import { ensureGsap } from "@/lib/gsap";
 const levels = [
   {
     level: "Step 1",
-    title: "Signal",
-    earns: "You do the hard diagnostic work",
-    does: "Screening, interviews, and structured notes",
+    title: "Publish your role",
+    earns: "You submit your vacancy from Inspira",
+    does: "Exclusive access for coworking community members",
   },
   {
     level: "Step 2",
-    title: "Recommendation",
-    earns: "You present a candidate with clear rationale",
-    does: "Technical and behavioral evidence, not opinions",
+    title: "Get top applicants",
+    earns: "You receive strong candidate flow",
+    does: "200+ applications per publication on average",
   },
   {
     level: "Step 3",
-    title: "Rejection",
-    earns: "Feedback arrives without structure",
-    does: "\"Not convinced\" with no shared criteria",
+    title: "Filter with assessments",
+    earns: "We guide technical and personality evaluations",
+    does: "Shortlist candidates with objective criteria",
   },
   {
     level: "Step 4",
-    title: "Reprocess",
-    earns: "The process starts again and trust drops",
-    does: "Time lost for recruiter, leader, and candidate",
+    title: "Decide with reports",
+    earns: "You get a full report per candidate",
+    does: "Skills, fit, and recommendation for final decision",
   },
 ];
 const levelsEs = [
   {
     level: "Paso 1",
-    title: "Senal",
-    earns: "Haces el trabajo de diagnostico mas complejo",
-    does: "Filtro, entrevistas y notas estructuradas",
+    title: "Publica tu oferta",
+    earns: "Subes tu vacante desde Inspira",
+    does: "Acceso exclusivo para la comunidad del Coworking",
   },
   {
     level: "Paso 2",
-    title: "Recomendacion",
-    earns: "Presentas candidatos con criterio claro",
-    does: "Evidencia tecnica y humana, no opiniones sueltas",
+    title: "Recibe candidatos top",
+    earns: "Obtienes flujo de perfiles de alto nivel",
+    does: "Mas de 200 aplicaciones por publicacion en promedio",
   },
   {
     level: "Paso 3",
-    title: "Rechazo",
-    earns: "La decision llega sin estructura",
-    does: "\"No me convencio\" sin criterios compartidos",
+    title: "Filtra con evaluaciones",
+    earns: "Guiamos pruebas tecnicas y de personalidad",
+    does: "Priorizas candidatos con criterios objetivos",
   },
   {
     level: "Paso 4",
-    title: "Reproceso",
-    earns: "Se reinicia la seleccion y cae la confianza",
-    does: "Se pierde tiempo para reclutador, lider y candidato",
+    title: "Decide con reportes",
+    earns: "Recibes un reporte completo por candidato",
+    does: "Habilidades, ajuste y recomendacion final",
   },
 ];
 
@@ -90,18 +90,18 @@ export default function Levels({ locale = "en" }: LevelsProps) {
   }, []);
 
   return (
-    <section ref={root} id="levels" className="bg-firo-bg py-24">
+    <section ref={root} id="proceso" className="bg-firo-bg py-24">
       <Container>
         <div className="grid gap-10 md:grid-cols-2 md:items-start">
           <div className="md:sticky md:top-28">
-            <div className="text-sm font-semibold text-firo-blue">{isEs ? "Reframe" : "Reframe"}</div>
+            <div className="text-sm font-semibold text-firo-blue">{isEs ? "Proceso" : "Process"}</div>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
-              {isEs ? "No es un problema de talento. Es un problema de confianza." : "This is not a talent problem. It is a trust problem."}
+              {isEs ? "Asi funciona la seleccion para empresas de Inspira" : "How hiring works for Inspira companies"}
             </h2>
             <p className="mt-4 text-firo-muted">
               {isEs
-                ? "Las empresas casi nunca cuestionan el proceso. Cuestionan el criterio del reclutador. PeakU introduce evidencia estructurada para que las decisiones de contratacion se sostengan internamente."
-                : "Teams rarely question the process itself. They question the recruiter’s judgment. PeakU adds structured evidence to make hiring decisions defensible."}
+                ? "Combinamos alcance, evaluacion y analitica para que cada vacante se convierta en una contratacion mejor respaldada."
+                : "We combine reach, assessments, and analytics so each role leads to better hiring decisions."}
             </p>
           </div>
 
@@ -119,8 +119,8 @@ export default function Levels({ locale = "en" }: LevelsProps) {
                 <div className="mt-2 text-xl font-semibold tracking-tight">{l.title}</div>
 
                 <div className="mt-4 grid gap-3 md:grid-cols-2">
-                  <Stat label={isEs ? "Que ocurre" : "What happens"} value={l.earns} />
-                  <Stat label={isEs ? "Impacto" : "Impact"} value={l.does} />
+                  <Stat label={isEs ? "Que incluye" : "Included"} value={l.earns} />
+                  <Stat label={isEs ? "Resultado" : "Outcome"} value={l.does} />
                 </div>
               </div>
             ))}

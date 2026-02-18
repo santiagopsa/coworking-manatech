@@ -36,40 +36,35 @@ export default function Lore({ locale = "en" }: LoreProps) {
   }, []);
 
   return (
-    <section ref={root} id="lore" className="bg-firo-bg py-24 text-firo-text">
+    <section ref={root} id="beneficios" className="bg-firo-bg py-24 text-firo-text">
       <Container>
         <div className="max-w-3xl">
           <div data-reveal className="text-sm font-semibold text-firo-blue">
-            {isEs ? "Contexto" : "Context"}
+            {isEs ? "Beneficios para la comunidad Inspira" : "Benefits for Inspira community"}
           </div>
           <h2 data-reveal className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
             {isEs
-              ? "El trabajo invisible del reclutador"
-              : "The recruiter’s invisible work"}
+              ? "Publica una vacante con ventaja real desde tu Coworking."
+              : "Post roles with a real hiring advantage."}
           </h2>
           <p data-reveal className="mt-4 text-firo-muted">
             {isEs
-              ? "Filtras cientos de perfiles. Haces entrevistas estructuradas. Evaluas habilidades tecnicas y humanas. Construyes una recomendacion solida."
-              : "You review hundreds of profiles, run structured interviews, and build strong recommendations."}
-          </p>
-          <p data-reveal className="mt-3 text-firo-muted">
-            {isEs
-              ? "Y muchas veces todo termina en una frase: \"No me convencio.\""
-              : "And too often everything ends with one sentence: \"I am not convinced.\""}
+              ? "Inspira ofrece a su comunidad acceso exclusivo a PeakU para atraer talento de alto nivel, evaluar mejor y contratar con mas confianza."
+              : "Inspira gives its community exclusive access to PeakU to attract better candidates and hire with confidence."}
           </p>
 
           <div className="mt-10 grid gap-4 md:grid-cols-3">
             <Card
-              title={isEs ? "Filtro riguroso" : "Rigorous filtering"}
-              desc={isEs ? "Filtras cientos de perfiles para separar potencial real de ruido." : "You filter hundreds of profiles to separate signal from noise."}
+              title={isEs ? "Acceso a talento especializado" : "Access specialized talent"}
+              desc={isEs ? "Conecta con la base de talento especializado mas grande de Colombia." : "Connect with the largest specialized talent base in Colombia."}
             />
             <Card
-              title={isEs ? "Criterio profesional" : "Structured judgment"}
-              desc={isEs ? "Estructuras entrevistas, evaluas habilidades y comparas evidencia." : "You structure interviews, evaluate skills, and compare evidence."}
+              title={isEs ? "Mas de 200 aplicaciones" : "200+ applications per role"}
+              desc={isEs ? "Cada publicacion recibe alto volumen para elegir entre los mejores perfiles." : "Every post receives high applicant volume, so you can choose the strongest profiles."}
             />
             <Card
-              title={isEs ? "Desgaste interno" : "Internal friction"}
-              desc={isEs ? "Sin contexto compartido, tus recomendaciones quedan expuestas a opiniones sueltas." : "Without shared context, your recommendations are exposed to subjective calls."}
+              title={isEs ? "Evaluacion guiada" : "Guided evaluation"}
+              desc={isEs ? "Aplicamos pruebas tecnicas y de personalidad para filtrar con criterio." : "We run technical and personality testing to improve screening quality."}
             />
           </div>
         </div>

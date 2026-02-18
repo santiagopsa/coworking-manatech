@@ -55,7 +55,7 @@ export default function HeroParallax() {
   return (
     <section
       ref={root}
-      className="relative min-h-[100vh] overflow-hidden text-white bg-gradient-to-b from-firo-navy via-slate-900 to-slate-950"
+      className="relative min-h-[100vh] overflow-hidden text-white bg-gradient-to-b from-firo-blue via-firo-blue to-firo-muted"
     >
       <div ref={layerBg} className="absolute inset-0 opacity-80">
         <Image
@@ -93,7 +93,7 @@ export default function HeroParallax() {
 
               <h1 className="mt-6 text-4xl font-semibold tracking-tight md:text-6xl">
                 Deploy.{" "}
-                <span className="text-firo-blue drop-shadow-[0_0_22px_rgba(37,99,255,.45)]">
+                <span className="text-firo-blue drop-shadow-[0_0_22px_rgba(94,173,76,.45)]">
                   Operate.
                 </span>{" "}
                 Earn.
@@ -160,7 +160,7 @@ export default function HeroParallax() {
         </div>
       </Container>
 
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-firo-navy to-transparent" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-firo-blue to-transparent" />
     </section>
   );
 }

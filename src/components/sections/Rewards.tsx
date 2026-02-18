@@ -8,24 +8,24 @@ type RewardsProps = {
 export default function Rewards({ locale = "en" }: RewardsProps) {
   const isEs = locale === "es";
   return (
-    <section id="rewards" className="bg-firo-bg py-24 text-firo-text">
+    <section id="resultados" className="bg-firo-bg py-24 text-firo-text">
       <Container>
         <div className="grid gap-10 md:grid-cols-2 md:items-center">
           <div>
-            <div className="text-sm font-semibold text-firo-blue">{isEs ? "Origen de PeakU" : "Why PeakU exists"}</div>
+            <div className="text-sm font-semibold text-firo-blue">{isEs ? "Alianza Inspira + PeakU" : "Inspira + PeakU partnership"}</div>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
-              {isEs ? "Esto fue exactamente lo que nos llevo a crear PeakU" : "This is exactly why we built PeakU"}
+              {isEs ? "Una pagina QR para activar vacantes de alto impacto" : "A QR landing page to launch high-impact hiring"}
             </h2>
             <p className="mt-4 text-firo-muted">
               {isEs
-                ? "Vimos reclutadores con buen criterio quedarse sin respaldo interno. PeakU les ayuda a estructurar evaluaciones, generar reportes de seleccion y presentar candidatos en un formato que los equipos si confian."
-                : "We kept seeing recruiters with solid judgment lose internal support. PeakU helps structure evaluations, build hiring reports, and present candidates in a format teams trust."}
+                ? "Este QR conecta a la comunidad de Inspira con una ruta de publicacion exclusiva: mas alcance, mejores filtros y reportes claros para contratar mejor."
+                : "This QR connects Inspira's community with an exclusive publishing route: wider reach, stronger filtering, and clear decision-ready reports."}
             </p>
 
             <div className="mt-8 grid gap-3 md:grid-cols-3">
-              <Loot title={isEs ? "Evaluaciones claras" : "Clear evaluations"} value={isEs ? "Criterios visibles" : "Visible criteria"} />
-              <Loot title={isEs ? "Reportes de seleccion" : "Hiring reports"} value={isEs ? "Evidencia ordenada" : "Organized evidence"} />
-              <Loot title={isEs ? "Alineacion interna" : "Internal alignment"} value={isEs ? "Menos friccion" : "Less friction"} />
+              <Loot title={isEs ? "Alcance de candidatos" : "Candidate reach"} value={isEs ? "+200 por oferta" : "200+ per post"} />
+              <Loot title={isEs ? "Evaluacion tecnica" : "Technical assessment"} value={isEs ? "Guiada por PeakU" : "Guided by PeakU"} />
+              <Loot title={isEs ? "Reporte final" : "Final report"} value={isEs ? "Por cada candidato" : "Per candidate"} />
             </div>
           </div>
 
@@ -33,7 +33,7 @@ export default function Rewards({ locale = "en" }: RewardsProps) {
             <div className="absolute -inset-10 rounded-[40px] bg-firo-blue/15 blur-3xl" />
             <Image
               src="/assets/hero/dashboard.png"
-              alt="FIRO dashboard"
+              alt="PeakU dashboard"
               width={1400}
               height={900}
               className="relative w-full rounded-3xl shadow-soft"

@@ -5,16 +5,16 @@ import Container from "../ui/Container";
 import { ensureGsap } from "@/lib/gsap";
 
 const cards = [
-  { title: "Evidence-backed decisions", desc: "Each recommendation is presented with clear criteria and objective signals." },
-  { title: "Fewer repeated hiring processes", desc: "Shared structure reduces resets, delays, and unnecessary back-and-forth." },
-  { title: "Higher hiring leader trust", desc: "Leaders understand why a candidate fits, before relying on gut feeling." },
-  { title: "Your work becomes visible", desc: "The depth of your recruiting process is no longer hidden behind opinions." },
+  { title: "Complete candidate report", desc: "Every shortlisted profile includes technical results, personality insights, and hiring recommendation." },
+  { title: "Faster shortlisting", desc: "Assessment-backed filtering helps your team spend time only with high-fit candidates." },
+  { title: "Higher decision confidence", desc: "Hiring managers receive objective evidence, not only resumes and opinions." },
+  { title: "Exclusive coworking advantage", desc: "Inspira companies publish with a differentiated channel to reach top talent." },
 ];
 const cardsEs = [
-  { title: "Decisiones respaldadas con evidencia", desc: "Cada recomendacion se presenta con criterios claros y senales objetivas." },
-  { title: "Menos reprocesos de seleccion", desc: "Una estructura compartida evita reinicios, demoras y discusiones circulares." },
-  { title: "Mayor confianza del lider contratante", desc: "El lider entiende por que el candidato encaja antes de decidir por intuicion." },
-  { title: "Tu trabajo se vuelve visible", desc: "El valor de tu proceso deja de perderse en opiniones aisladas." },
+  { title: "Reporte completo por candidato", desc: "Cada perfil preseleccionado incluye resultados tecnicos, rasgos de personalidad y recomendacion." },
+  { title: "Preseleccion mas rapida", desc: "El filtrado con evaluaciones permite enfocar entrevistas en perfiles de mayor ajuste." },
+  { title: "Decisiones con mas certeza", desc: "Los lideres reciben evidencia objetiva para decidir con seguridad." },
+  { title: "Ventaja exclusiva para Inspira", desc: "Las empresas del Coworking publican en un canal diferenciado para atraer mejor talento." },
 ];
 
 type StickySwapProps = {
@@ -58,14 +58,14 @@ export default function StickySwap({ locale = "en" }: StickySwapProps) {
       <Container>
         <div className="grid gap-10 md:grid-cols-2">
           <div className="md:sticky md:top-24 md:h-fit">
-            <div className="text-sm font-semibold text-firo-blue">{isEs ? "Resultados" : "Outcomes"}</div>
+            <div className="text-sm font-semibold text-firo-blue">{isEs ? "Resultados esperados" : "Expected outcomes"}</div>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
-              {isEs ? "Lo que cambia cuando hay evidencia compartida" : "What changes when evidence is shared"}
+              {isEs ? "Lo que obtiene tu equipo al publicar con PeakU desde Inspira" : "What your team gets by posting through Inspira"}
             </h2>
             <p className="mt-4 max-w-lg text-firo-muted">
               {isEs
-                ? "No se trata de convencer con mas opinion. Se trata de mostrar mejor el trabajo que ya haces."
-                : "It is not about arguing harder. It is about making your process visible and credible."}
+                ? "No es solo volumen de postulaciones. Es calidad de filtro y claridad para tomar decisiones de contratacion."
+                : "It is not just higher applicant volume. It is better filtering and clear evidence for final hiring decisions."}
             </p>
           </div>
 

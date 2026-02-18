@@ -20,9 +20,11 @@ export default function Nav({ locale = "en" }: NavProps) {
       : `/es${pathname}`;
   const homePath = isEs ? "/es" : "/";
   const homeHref = isHomePath ? "#top" : homePath;
-  const anchorHref = (id: "quote") =>
+  const anchorHref = (id: "beneficios" | "proceso" | "join") =>
     isHomePath ? `#${id}` : `${homePath}#${id}`;
-  const guideHref = anchorHref("quote");
+  const benefitsHref = anchorHref("beneficios");
+  const processHref = anchorHref("proceso");
+  const joinHref = anchorHref("join");
 
   return (
     <div className="fixed inset-x-0 top-0 z-50 border-b border-firo-line bg-white/85 text-firo-text backdrop-blur-xl">
@@ -39,7 +41,8 @@ export default function Nav({ locale = "en" }: NavProps) {
         </a>
 
         <nav className="hidden items-center gap-7 text-sm text-firo-muted md:flex">
-          <a href={guideHref} className="hover:text-firo-text">{isEs ? "Guia" : "Guide"}</a>
+          <a href={benefitsHref} className="hover:text-firo-text">{isEs ? "Beneficios" : "Benefits"}</a>
+          <a href={processHref} className="hover:text-firo-text">{isEs ? "Proceso" : "Process"}</a>
         </nav>
 
         <div className="flex items-center gap-2">
@@ -50,10 +53,10 @@ export default function Nav({ locale = "en" }: NavProps) {
             {isEs ? "EN" : "ES"}
           </a>
           <a
-            href={guideHref}
-            className="rounded-xl bg-white/10 px-3 py-2 text-sm font-semibold hover:bg-white/15 md:px-4"
+            href={joinHref}
+            className="rounded-xl bg-firo-blue px-3 py-2 text-sm font-semibold text-white hover:opacity-95 md:px-4"
           >
-            {isEs ? "Descargar guia" : "Download guide"}
+            {isEs ? "Publicar oferta en PeakU" : "Post a job on PeakU"}
           </a>
         </div>
       </div>

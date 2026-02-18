@@ -8,16 +8,16 @@ import Rewards from "@/components/sections/Rewards";
 import Join from "@/components/sections/Join";
 
 export const metadata: Metadata = {
-  title: "PeakU | Guia para reclutadores que necesitan respaldo interno",
+  title: "Inspira x PeakU | Publica ofertas con acceso a talento top",
   description:
-    "Landing de PeakU para reclutadores que sienten su criterio subvalorado: evidencia estructurada para defender candidatos y reducir reprocesos.",
+    "Landing QR para la comunidad de Inspira: publica vacantes con acceso a la base de talento especializado de PeakU, pruebas tecnicas y reportes por candidato.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "PeakU | Reclutamiento con evidencia y confianza interna",
+    title: "Inspira x PeakU | Contrata mejor desde tu Coworking",
     description:
-      "Descarga una guia practica para presentar candidatos con claridad, datos y criterios que los lideres entienden.",
+      "Acceso exclusivo para empresas de Inspira: mas de 200 aplicaciones por oferta, filtrado guiado y reportes completos por candidato.",
     url: "/",
     images: [
       {
@@ -37,9 +37,7 @@ export default function Page() {
       <VideoHero />
       <Lore />
       <Levels />
-      <div id="thesis">
-        <StickySwap />
-      </div>
+      <StickySwap />
       <Rewards />
       <Join />
     </main>
