@@ -43,32 +43,34 @@ export default function RoiCalc({ locale = "en" }: RoiCalcProps) {
   );
 
   return (
-    <section id="roi" className="bg-white py-24">
+    <section id="roi" className="bg-firo-bg py-24">
       <Container>
         <div className="grid gap-10 md:grid-cols-2 md:items-center">
           <div>
-            <div className="text-sm font-semibold text-firo-blue">{isEs ? "Simulador ROI" : "ROI simulator"}</div>
+            <div className="text-sm font-semibold text-firo-blue">{isEs ? "Cierre" : "Final step"}</div>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
-              {isEs ? "Modela tu retorno con supuestos visibles." : "Model your return with visible assumptions."}
+              {isEs
+                ? "Cuando cambia la forma de presentar candidatos, cambia la conversacion."
+                : "When candidate presentation changes, the conversation changes."}
             </h2>
             <p className="mt-4 text-firo-muted">
               {isEs
-                ? "Formula leasing: Bruto = dias x tarifa diaria. Neto operativo = Bruto - operador - otros ops. Distribuible = Neto operativo - leasing mensual. El inversionista recibe 70% del distribuible. Contrato minimo: 24 meses."
-                : "Leasing formula: Gross = days x day rate. Operating net = Gross - operator - other ops. Distributable = Operating net - monthly lease. Investor receives 70% of distributable. Minimum term: 24 months."}
+                ? "Usa este esquema para convertir una recomendacion en una conversacion con contexto, evidencia y criterios compartidos."
+                : "Use this structure to turn a recommendation into a conversation with context, evidence, and shared criteria."}
             </p>
 
             <div className="mt-8 space-y-6 rounded-2xl border border-firo-line bg-firo-bg p-6">
-              <Slider label={isEs ? "Dias en uso por mes" : "Days per month in use"} value={days} min={4} max={24} onChange={setDays} />
-              <Slider label={isEs ? "Tarifa por dia al cliente (USD)" : "Client rate per day (USD)"} value={rate} min={300} max={1500} onChange={setRate} />
+              <Slider label={isEs ? "Evidencias clave por candidato" : "Key evidence points per candidate"} value={days} min={4} max={24} onChange={setDays} />
+              <Slider label={isEs ? "Claridad del reporte (0-1500)" : "Report clarity score (0-1500)"} value={rate} min={300} max={1500} onChange={setRate} />
               <Slider
-                label={isEs ? "Costo operador por dia activo (USD)" : "Operator cost per active day (USD)"}
+                label={isEs ? "Nivel de objeciones internas" : "Internal objection load"}
                 value={operatorDay}
                 min={120}
                 max={400}
                 onChange={setOperatorDay}
               />
               <Slider
-                label={isEs ? "Otros ops (porcentaje del bruto)" : "Other ops (percent of gross)"}
+                label={isEs ? "Fraccion subjetiva de la decision" : "Subjective share in decision"}
                 value={Math.round(otherOps * 100)}
                 min={5}
                 max={30}
@@ -76,7 +78,7 @@ export default function RoiCalc({ locale = "en" }: RoiCalcProps) {
                 suffix="%"
               />
               <Slider
-                label={isEs ? "Leasing mensual (USD)" : "Monthly lease payment (USD)"}
+                label={isEs ? "Alineacion con el lider contratante" : "Hiring leader alignment"}
                 value={leaseMonthly}
                 min={600}
                 max={4000}
@@ -98,8 +100,8 @@ export default function RoiCalc({ locale = "en" }: RoiCalcProps) {
                     <div className="mt-1 text-lg font-semibold">${Math.round(investor).toLocaleString()}</div>
                     <div className="mt-1 text-xs text-firo-muted">
                       {isEs
-                        ? `Neto inversionista con ${s.days}d x $${s.rate}/d y leasing $${s.leaseMonthly}`
-                        : `Investor net at ${s.days}d x $${s.rate}/d with $${s.leaseMonthly} lease`}
+                        ? `Escenario de respaldo con ${s.days} evidencias y claridad ${s.rate}`
+                        : `Support scenario at ${s.days} evidence points and clarity ${s.rate}`}
                     </div>
                   </div>
                 );
@@ -107,63 +109,63 @@ export default function RoiCalc({ locale = "en" }: RoiCalcProps) {
             </div>
           </div>
 
-          <div className="rounded-3xl bg-firo-navy p-8 text-white shadow-soft">
-            <div className="text-sm text-white/60">{isEs ? "Neto mensual estimado para inversionista" : "Estimated investor pocketed monthly"}</div>
+          <div className="rounded-3xl border border-firo-line bg-white p-8 text-firo-text shadow-soft">
+            <div className="text-sm text-firo-muted">{isEs ? "Indicador estimado de respaldo interno" : "Estimated internal support indicator"}</div>
             <div className="mt-2 text-4xl font-semibold tracking-tight">
               ${Math.round(result.investor).toLocaleString()}
             </div>
-            <div className="mt-2 text-white/60">
+            <div className="mt-2 text-firo-muted">
               {isEs
-                ? `Bruto: $${Math.round(result.gross).toLocaleString()} • Operador: $${Math.round(result.operator).toLocaleString()} • Otros ops: $${Math.round(result.other).toLocaleString()} • Neto operativo: $${Math.round(result.operatingNet).toLocaleString()}`
-                : `Gross: $${Math.round(result.gross).toLocaleString()} • Operator: $${Math.round(result.operator).toLocaleString()} • Other ops: $${Math.round(result.other).toLocaleString()} • Operating net: $${Math.round(result.operatingNet).toLocaleString()}`}
+                ? `Base: $${Math.round(result.gross).toLocaleString()} • Objeciones: $${Math.round(result.operator).toLocaleString()} • Subjetividad: $${Math.round(result.other).toLocaleString()} • Solidez: $${Math.round(result.operatingNet).toLocaleString()}`
+                : `Base: $${Math.round(result.gross).toLocaleString()} • Objections: $${Math.round(result.operator).toLocaleString()} • Subjectivity: $${Math.round(result.other).toLocaleString()} • Strength: $${Math.round(result.operatingNet).toLocaleString()}`}
             </div>
-            <div className="mt-1 text-white/60">
+            <div className="mt-1 text-firo-muted">
               {isEs
-                ? `Leasing mensual: $${Math.round(leaseMonthly).toLocaleString()} • Distribuible: $${Math.round(result.distributable).toLocaleString()}`
-                : `Monthly lease: $${Math.round(leaseMonthly).toLocaleString()} • Distributable: $${Math.round(result.distributable).toLocaleString()}`}
+                ? `Alineacion: $${Math.round(leaseMonthly).toLocaleString()} • Diferencial: $${Math.round(result.distributable).toLocaleString()}`
+                : `Alignment: $${Math.round(leaseMonthly).toLocaleString()} • Delta: $${Math.round(result.distributable).toLocaleString()}`}
             </div>
-            <div className="mt-1 text-white/60">
+            <div className="mt-1 text-firo-muted">
               {isEs
-                ? `Pago inversionista (70%): $${Math.round(result.investor).toLocaleString()} • Fee FIRO (30%): $${Math.round(result.firoFee).toLocaleString()}`
-                : `Investor payout (70%): $${Math.round(result.investor).toLocaleString()} • FIRO fee (30%): $${Math.round(result.firoFee).toLocaleString()}`}
+                ? `Peso de evidencia: $${Math.round(result.investor).toLocaleString()} • Ruido interno: $${Math.round(result.firoFee).toLocaleString()}`
+                : `Evidence weight: $${Math.round(result.investor).toLocaleString()} • Internal noise: $${Math.round(result.firoFee).toLocaleString()}`}
             </div>
-            <div className="mt-1 text-white/60">
+            <div className="mt-1 text-firo-muted">
               {isEs
-                ? `Cobertura leasing: ${result.leaseCoverage.toFixed(2)}x (neto operativo / leasing)`
-                : `Lease coverage: ${result.leaseCoverage.toFixed(2)}x (operating net / lease)`}
+                ? `Cobertura del argumento: ${result.leaseCoverage.toFixed(2)}x`
+                : `Argument coverage: ${result.leaseCoverage.toFixed(2)}x`}
             </div>
-            <div className="mt-1 text-white/60">
+            <div className="mt-1 text-firo-muted">
               {isEs
-                ? `Contrato minimo: ${contractMonths} meses • Permanencia dura: ${hardCommitMonths} meses`
-                : `Minimum contract: ${contractMonths} months • Hard commitment: ${hardCommitMonths} months`}
+                ? `Horizonte de adopcion: ${contractMonths} semanas • Ajuste inicial: ${hardCommitMonths} semanas`
+                : `Adoption horizon: ${contractMonths} weeks • Initial adjustment: ${hardCommitMonths} weeks`}
             </div>
-            <div className="mt-1 text-white/60">
+            <div className="mt-1 text-firo-muted">
               {isEs
-                ? `Reserva operativa sugerida (${reserveMonths} meses): $${Math.round(result.reserveRequired).toLocaleString()}`
-                : `Suggested operating reserve (${reserveMonths} months): $${Math.round(result.reserveRequired).toLocaleString()}`}
+                ? `Reserva de contexto (${reserveMonths} iteraciones): $${Math.round(result.reserveRequired).toLocaleString()}`
+                : `Context reserve (${reserveMonths} iterations): $${Math.round(result.reserveRequired).toLocaleString()}`}
             </div>
-            <div className="mt-1 text-white/60">
+            <div className="mt-1 text-firo-muted">
               {isEs
-                ? `Neto proyectado al inversionista en ${contractMonths} meses: $${Math.round(result.investorTermTotal).toLocaleString()}`
-                : `Projected investor net over ${contractMonths} months: $${Math.round(result.investorTermTotal).toLocaleString()}`}
+                ? `Impacto acumulado en ${contractMonths} semanas: $${Math.round(result.investorTermTotal).toLocaleString()}`
+                : `Accumulated impact over ${contractMonths} weeks: $${Math.round(result.investorTermTotal).toLocaleString()}`}
             </div>
 
             <div className="mt-8 grid grid-cols-2 gap-4">
               <Info
-                title={isEs ? "Motor de utilizacion" : "Utilization driver"}
-                desc={isEs ? "Eventos, activaciones de marca y contratos con recintos." : "Events, brand activations, venue contracts."}
+                title={isEs ? "Evidencia compartida" : "Shared evidence"}
+                desc={isEs ? "Competencias, contexto y razones comparables para cada perfil." : "Comparable competencies, context, and rationale for each profile."}
               />
               <Info
-                title={isEs ? "Operaciones incluidas" : "Operations included"}
-                desc={isEs ? "Operador dedicado, agenda y flujos de mantenimiento." : "Dedicated operator, scheduling, maintenance workflows."}
+                title={isEs ? "Reportes claros" : "Clear reports"}
+                desc={isEs ? "Resumen ejecutable para lideres que necesitan decidir rapido." : "Actionable summaries for leaders who need to decide quickly."}
               />
               <Info
-                title={isEs ? "Controles de riesgo" : "Risk controls"}
-                desc={isEs ? "Geocercas, operacion supervisada y politicas de privacidad." : "Geofencing, supervised ops, privacy policy."}
+                title={isEs ? "Trazabilidad" : "Traceability"}
+                desc={isEs ? "Cada decision queda respaldada por criterios visibles." : "Each decision is backed by visible criteria."}
               />
               <Info
-                title={isEs ? "Visibilidad de pagos" : "Payout visibility"}
-                desc={isEs ? "Dashboard del inversionista con logs y reportes mensuales." : "Investor dashboard with logs + monthly statements."}
+                title={isEs ? "Confianza interna" : "Internal trust"}
+                desc={isEs ? "Menos friccion entre recruiting y equipos contratantes." : "Less friction between recruiting and hiring teams."}
               />
             </div>
 
@@ -172,7 +174,7 @@ export default function RoiCalc({ locale = "en" }: RoiCalcProps) {
               href="#join"
               className="mt-8 inline-flex w-full items-center justify-center rounded-xl bg-firo-blue px-5 py-3 text-sm font-semibold hover:opacity-95"
             >
-              {isEs ? "Agendar llamada para inversionistas" : "Book investor call"}
+              {isEs ? "Quiero la guia" : "I want the guide"}
             </a>
           </div>
         </div>
@@ -218,9 +220,9 @@ function Slider({
 
 function Info({ title, desc }: { title: string; desc: string }) {
   return (
-    <div className="rounded-2xl bg-white/5 p-4">
+    <div className="rounded-2xl border border-firo-line bg-firo-bg p-4">
       <div className="text-sm font-semibold">{title}</div>
-      <div className="mt-1 text-sm text-white/65">{desc}</div>
+      <div className="mt-1 text-sm text-firo-muted">{desc}</div>
     </div>
   );
 }

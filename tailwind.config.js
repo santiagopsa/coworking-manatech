@@ -8,15 +8,15 @@ module.exports = {
       extend: {
         colors: {
           firo: {
-            navy: "#0B1220",
-            blue: "#2563FF",
-            violet: "#7C3AED",
-            bg: "#F7F9FC",
-            text: "#0F172A",
+            navy: "#0F172A",
+            blue: "#3B82F6",
+            violet: "#8B5CF6",
+            bg: "#EEF4FF",
+            text: "#1E293B",
             muted: "#64748B",
-            line: "#E2E8F0",
-            success: "#16A34A",
-            warn: "#D97706",
+            line: "#D8E3F8",
+            success: "#10B981",
+            warn: "#F59E0B",
           },
         },
         boxShadow: {

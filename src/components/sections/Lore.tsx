@@ -36,35 +36,40 @@ export default function Lore({ locale = "en" }: LoreProps) {
   }, []);
 
   return (
-    <section ref={root} id="lore" className="bg-firo-navy py-24 text-white">
+    <section ref={root} id="lore" className="bg-firo-bg py-24 text-firo-text">
       <Container>
         <div className="max-w-3xl">
           <div data-reveal className="text-sm font-semibold text-firo-blue">
-            {isEs ? "Historia" : "Lore"}
+            {isEs ? "Contexto" : "Context"}
           </div>
           <h2 data-reveal className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
             {isEs
-              ? "El mundo no se quedo sin trabajo: se quedo sin operadores confiables."
-              : "The world didn’t run out of work — it ran out of reliable operators."}
+              ? "El trabajo invisible del reclutador"
+              : "The recruiter’s invisible work"}
           </h2>
-          <p data-reveal className="mt-4 text-white/70">
+          <p data-reveal className="mt-4 text-firo-muted">
             {isEs
-              ? "FIRO convierte robots humanoides en una clase de activo: utilizacion medible, uptime gestionado y pagos transparentes. Empezamos en entornos controlados y luego desbloqueamos mercados mas complejos."
-              : "FIRO converts humanoid robots into an asset class: measurable utilization, managed uptime, and transparent payouts. Start where the environment is controlled, then unlock harder quests."}
+              ? "Filtras cientos de perfiles. Haces entrevistas estructuradas. Evaluas habilidades tecnicas y humanas. Construyes una recomendacion solida."
+              : "You review hundreds of profiles, run structured interviews, and build strong recommendations."}
+          </p>
+          <p data-reveal className="mt-3 text-firo-muted">
+            {isEs
+              ? "Y muchas veces todo termina en una frase: \"No me convencio.\""
+              : "And too often everything ends with one sentence: \"I am not convinced.\""}
           </p>
 
           <div className="mt-10 grid gap-4 md:grid-cols-3">
             <Card
-              title={isEs ? "Escasez" : "Scarcity"}
-              desc={isEs ? "La disponibilidad humana es volatil. La demanda no." : "Human availability is volatile. Demand isn’t."}
+              title={isEs ? "Filtro riguroso" : "Rigorous filtering"}
+              desc={isEs ? "Filtras cientos de perfiles para separar potencial real de ruido." : "You filter hundreds of profiles to separate signal from noise."}
             />
             <Card
-              title={isEs ? "Control" : "Control"}
-              desc={isEs ? "Eventos y recintos tienen presupuesto, alcance y cronograma." : "Events & venues have budgets, scope, and schedules."}
+              title={isEs ? "Criterio profesional" : "Structured judgment"}
+              desc={isEs ? "Estructuras entrevistas, evaluas habilidades y comparas evidencia." : "You structure interviews, evaluate skills, and compare evidence."}
             />
             <Card
-              title={isEs ? "Escala" : "Scale"}
-              desc={isEs ? "Los playbooks se acumulan. La capacidad se desbloquea con el tiempo." : "Playbooks compound. Capability unlocks over time."}
+              title={isEs ? "Desgaste interno" : "Internal friction"}
+              desc={isEs ? "Sin contexto compartido, tus recomendaciones quedan expuestas a opiniones sueltas." : "Without shared context, your recommendations are exposed to subjective calls."}
             />
           </div>
         </div>
@@ -75,9 +80,9 @@ export default function Lore({ locale = "en" }: LoreProps) {
 
 function Card({ title, desc }: { title: string; desc: string }) {
   return (
-    <div data-reveal className="rounded-2xl border border-white/10 bg-white/5 p-5">
+    <div data-reveal className="rounded-2xl border border-firo-line bg-white p-5">
       <div className="font-semibold">{title}</div>
-      <div className="mt-2 text-sm text-white/65">{desc}</div>
+      <div className="mt-2 text-sm text-firo-muted">{desc}</div>
     </div>
   );
 }

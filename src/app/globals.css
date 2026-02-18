@@ -1,10 +1,31 @@
 @import "tailwindcss";
 @config "../../tailwind.config.js";
 
+@theme {
+  --color-firo-navy: #0f172a;
+  --color-firo-blue: #3b82f6;
+  --color-firo-violet: #8b5cf6;
+  --color-firo-bg: #eef4ff;
+  --color-firo-text: #1e293b;
+  --color-firo-muted: #64748b;
+  --color-firo-line: #d8e3f8;
+  --color-firo-success: #10b981;
+  --color-firo-warn: #f59e0b;
+  --shadow-soft: 0 10px 30px rgba(2, 6, 23, 0.10);
+}
+
 :root{
-  --bg:#F7F9FC;
-  --text:#0F172A;
+  --bg:#EEF4FF;
+  --text:#1E293B;
 }
 
 html, body { height: 100%; }
-body { background: var(--bg); color: var(--text); }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-inter), ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-space-grotesk), var(--font-inter), ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}

@@ -5,16 +5,16 @@ import Container from "../ui/Container";
 import { ensureGsap } from "@/lib/gsap";
 
 const cards = [
-  { title: "Leasing model", desc: "Structured leasing, clear utilization, measurable uptime." },
-  { title: "Demand placement", desc: "We place robots where budgets already exist: events first." },
-  { title: "Operations moat", desc: "Maintenance, remote ops, compliance and scheduling." },
-  { title: "Capability unlocks", desc: "More tasks over time via software + playbooks." },
+  { title: "Evidence-backed decisions", desc: "Each recommendation is presented with clear criteria and objective signals." },
+  { title: "Fewer repeated hiring processes", desc: "Shared structure reduces resets, delays, and unnecessary back-and-forth." },
+  { title: "Higher hiring leader trust", desc: "Leaders understand why a candidate fits, before relying on gut feeling." },
+  { title: "Your work becomes visible", desc: "The depth of your recruiting process is no longer hidden behind opinions." },
 ];
 const cardsEs = [
-  { title: "Modelo de leasing", desc: "Leasing estructurado, utilizacion clara y uptime medible." },
-  { title: "Colocacion de demanda", desc: "Ubicamos robots donde ya existe presupuesto: primero eventos." },
-  { title: "Moat operativo", desc: "Mantenimiento, operacion remota, cumplimiento y agenda." },
-  { title: "Desbloqueos de capacidad", desc: "Mas tareas con el tiempo via software y playbooks." },
+  { title: "Decisiones respaldadas con evidencia", desc: "Cada recomendacion se presenta con criterios claros y senales objetivas." },
+  { title: "Menos reprocesos de seleccion", desc: "Una estructura compartida evita reinicios, demoras y discusiones circulares." },
+  { title: "Mayor confianza del lider contratante", desc: "El lider entiende por que el candidato encaja antes de decidir por intuicion." },
+  { title: "Tu trabajo se vuelve visible", desc: "El valor de tu proceso deja de perderse en opiniones aisladas." },
 ];
 
 type StickySwapProps = {
@@ -58,14 +58,14 @@ export default function StickySwap({ locale = "en" }: StickySwapProps) {
       <Container>
         <div className="grid gap-10 md:grid-cols-2">
           <div className="md:sticky md:top-24 md:h-fit">
-            <div className="text-sm font-semibold text-firo-blue">{isEs ? "La tesis" : "The thesis"}</div>
+            <div className="text-sm font-semibold text-firo-blue">{isEs ? "Resultados" : "Outcomes"}</div>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
-              {isEs ? "La proxima clase de activos es operativa." : "The next asset class is operational."}
+              {isEs ? "Lo que cambia cuando hay evidencia compartida" : "What changes when evidence is shared"}
             </h2>
             <p className="mt-4 max-w-lg text-firo-muted">
               {isEs
-                ? "Empezamos en entornos controlados con presupuestos claros (eventos), luego expandimos capacidades a medida que maduran los playbooks de software."
-                : "We start in controlled environments with clear budgets (events), then expand capabilities as software playbooks mature."}
+                ? "No se trata de convencer con mas opinion. Se trata de mostrar mejor el trabajo que ya haces."
+                : "It is not about arguing harder. It is about making your process visible and credible."}
             </p>
           </div>
 

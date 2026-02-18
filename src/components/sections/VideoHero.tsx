@@ -36,7 +36,7 @@ export default function VideoHero({ locale = "en" }: VideoHeroProps) {
   return (
     <section
       ref={root}
-      className="relative min-h-[100vh] overflow-hidden bg-firo-navy text-white"
+      className="relative min-h-[100vh] overflow-hidden bg-firo-bg text-firo-text"
     >
       <video
         className="absolute inset-0 h-full w-full object-cover"
@@ -51,7 +51,7 @@ export default function VideoHero({ locale = "en" }: VideoHeroProps) {
         <source src="/video/firo-hero.mp4" type="video/mp4" />
       </video>
 
-      <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/35 to-firo-navy/85" />
+      <div className="absolute inset-0 bg-gradient-to-b from-white/85 via-white/65 to-firo-bg/95" />
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.06] mix-blend-overlay"
         style={{
@@ -63,106 +63,76 @@ export default function VideoHero({ locale = "en" }: VideoHeroProps) {
       <Container>
         <div className="relative z-10 flex min-h-[100vh] items-center py-16">
           <div className="max-w-2xl">
-            <div className="mb-4 flex items-center gap-2 text-xs text-white/70">
+            <div className="mb-4 flex items-center gap-2 text-xs text-firo-muted">
               <a
                 href="/"
-                className={`rounded-md px-2 py-1 hover:text-white ${
-                  !isEs ? "bg-white/10 text-white" : ""
+                className={`rounded-md px-2 py-1 hover:text-firo-text ${
+                  !isEs ? "bg-firo-blue/10 text-firo-text" : ""
                 }`}
               >
                 EN
               </a>
               <a
                 href="/es"
-                className={`rounded-md px-2 py-1 hover:text-white ${
-                  isEs ? "bg-white/10 text-white" : ""
+                className={`rounded-md px-2 py-1 hover:text-firo-text ${
+                  isEs ? "bg-firo-blue/10 text-firo-text" : ""
                 }`}
               >
                 ES
               </a>
             </div>
-            <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm text-white/80">
+            <div className="inline-flex items-center gap-2 rounded-full bg-white/80 px-4 py-2 text-sm text-firo-muted border border-firo-line">
               <span className="h-2 w-2 rounded-full bg-firo-blue" />
-              {isEs ? "Activos Robóticos FIRO" : "FIRO Robotic Assets"}
+              {isEs ? "PeakU para reclutadores" : "PeakU for recruiters"}
             </div>
 
             <h1 className="mt-6 text-4xl font-semibold tracking-tight md:text-6xl">
               {isEs ? (
                 <>
-                  Despliega.{" "}
+                  El problema no es encontrar buenos candidatos.
                   <span className="text-firo-blue drop-shadow-[0_0_22px_rgba(37,99,255,.45)]">
-                    Opera.
-                  </span>{" "}
-                  Gana.
+                    {" "}Es lograr que confien en tu criterio.
+                  </span>
                 </>
               ) : (
                 <>
-                  Deploy.{" "}
+                  The problem is not finding strong candidates.
                   <span className="text-firo-blue drop-shadow-[0_0_22px_rgba(37,99,255,.45)]">
-                    Operate.
-                  </span>{" "}
-                  Earn.
+                    {" "}It is getting others to trust your judgment.
+                  </span>
                 </>
               )}
             </h1>
 
-            <p className="mt-5 max-w-xl text-base leading-relaxed text-white/75 md:text-lg">
+            <p className="mt-5 max-w-xl text-base leading-relaxed text-firo-muted md:text-lg">
               {isEs
-                ? "Modelo leasing-first: el inversionista financia el leasing mensual y FIRO opera el robot para rentabilizarlo. Exigimos contrato minimo de 24 meses para asegurar predictibilidad operativa."
-                : "Leasing-first model: the investor funds monthly robot leasing while FIRO deploys and monetizes operations. A 24-month minimum contract is required for operational predictability."}
+                ? "Si alguna vez sentiste que tu trabajo como reclutador se pierde cuando un lider descarta candidatos sin contexto, esto es para ti."
+                : "If your recruiting work gets dismissed when a hiring leader rejects candidates without context, this page is for you."}
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
               <a
-                href="/investors"
-                className="rounded-xl bg-white/10 px-5 py-3 text-sm font-semibold text-white hover:bg-white/15"
-              >
-                {isEs ? "Ver resumen para inversionistas" : "View investor brief"}
-              </a>
-              <a
-                href="#roi"
+                href="#join"
                 className="rounded-xl bg-firo-blue px-5 py-3 text-sm font-semibold shadow-soft hover:opacity-95"
               >
-                {isEs ? "Simular ROI para inversionistas" : "Run investor ROI simulation"}
+                {isEs ? "Descargar guia gratuita" : "Download free guide"}
               </a>
               <a
                 href="#join"
-                className="rounded-xl bg-white/10 px-5 py-3 text-sm font-semibold text-white hover:bg-white/15"
+                className="rounded-xl border border-firo-line bg-white px-5 py-3 text-sm font-semibold text-firo-text hover:bg-firo-bg"
               >
-                {isEs ? "Unirme a la lista de inversionistas" : "Join the investor waitlist"}
+                {isEs ? "Quiero la guia" : "I want the guide"}
               </a>
             </div>
 
-            <div className="mt-10 grid max-w-lg grid-cols-3 gap-4 rounded-2xl bg-white/10 p-5 backdrop-blur">
-              <Metric
-                label={isEs ? "Neto mensual inversionista" : "Estimated investor net monthly"}
-                value={
-                  <span>
-                    $<span data-counter>0</span>
-                  </span>
-                }
-              />
-              <Metric label={isEs ? "Contrato minimo" : "Minimum contract"} value={isEs ? "24 meses" : "24 months"} />
-              <Metric label={isEs ? "Uso objetivo" : "Target use"} value={isEs ? "10+ dias/mes" : "10+ days/mo"} />
-            </div>
-
-            <p className="mt-3 text-xs text-white/55">
+            <p className="mt-3 text-xs text-firo-muted">
               {isEs
-                ? "Para inversionistas calificados. Proyecciones basadas en escenarios, no garantías."
-                : "For qualified investors. Scenario-based projections, not guarantees."}
+                ? "Una herramienta practica para respaldar tus decisiones de seleccion."
+                : "A practical tool to support your hiring decisions."}
             </p>
           </div>
         </div>
       </Container>
     </section>
-  );
-}
-
-function Metric({ label, value }: { label: string; value: React.ReactNode }) {
-  return (
-    <div>
-      <div className="text-xs text-white/60">{label}</div>
-      <div className="mt-1 text-lg font-semibold tracking-tight">{value}</div>
-    </div>
   );
 }

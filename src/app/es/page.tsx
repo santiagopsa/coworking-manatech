@@ -5,28 +5,27 @@ import Lore from "@/components/sections/Lore";
 import Levels from "@/components/sections/Levels";
 import StickySwap from "@/components/sections/StickySwap";
 import Rewards from "@/components/sections/Rewards";
-import RoiCalc from "@/components/sections/RoiCalc";
 import Join from "@/components/sections/Join";
 
 export const metadata: Metadata = {
-  title: "FIRO | Inversion con leasing en operaciones roboticas gestionadas",
+  title: "PeakU | Guia para reclutadores que necesitan respaldo interno",
   description:
-    "Invierte en operaciones roboticas FIRO con modelo leasing, despliegue operativo, metricas transparentes y escenarios claros de retorno para inversionistas.",
+    "Landing de PeakU para reclutadores que sienten su criterio subvalorado: evidencia estructurada para defender candidatos y reducir reprocesos.",
   alternates: {
     canonical: "/es",
   },
   openGraph: {
     locale: "es_ES",
-    title: "FIRO | Inversion con leasing en operaciones roboticas gestionadas",
+    title: "PeakU | Reclutamiento con evidencia y confianza interna",
     description:
-      "Financia leasing mensual, FIRO opera, y sigue retornos para inversionistas con supuestos transparentes.",
+      "Descarga una guia practica para presentar candidatos con claridad, datos y criterios que los lideres entienden.",
     url: "/es",
     images: [
       {
         url: "/assets/hero/dashboard.png",
         width: 1200,
         height: 800,
-        alt: "Dashboard FIRO para inversion en activos roboticos",
+        alt: "Dashboard PeakU para respaldo de decisiones de seleccion",
       },
     ],
   },
@@ -43,7 +42,6 @@ export default function PageEs() {
         <StickySwap locale="es" />
       </div>
       <Rewards locale="es" />
-      <RoiCalc locale="es" />
       <Join locale="es" />
     </main>
   );

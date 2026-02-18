@@ -30,7 +30,7 @@ export default function AboutPage() {
     <main id="top">
       <Nav />
 
-      <section className="bg-gradient-to-b from-firo-navy via-[#0B1430] to-[#070B14] pb-20 pt-28 text-white">
+      <section className="bg-gradient-to-b from-firo-navy via-slate-900 to-slate-950 pb-20 pt-28 text-white">
         <Container>
           <div className="max-w-3xl">
             <div className="text-sm font-semibold text-firo-blue">About FIRO</div>

@@ -20,18 +20,17 @@ export default function Nav({ locale = "en" }: NavProps) {
       : `/es${pathname}`;
   const homePath = isEs ? "/es" : "/";
   const homeHref = isHomePath ? "#top" : homePath;
-  const anchorHref = (id: "thesis" | "roi" | "quote") =>
+  const anchorHref = (id: "quote") =>
     isHomePath ? `#${id}` : `${homePath}#${id}`;
-  const investorsHref = isEs ? "/es/investors" : "/investors";
-  const aboutHref = isEs ? "/es/about" : "/about";
+  const guideHref = anchorHref("quote");
 
   return (
-    <div className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-firo-navy/70 text-white backdrop-blur-xl">
+    <div className="fixed inset-x-0 top-0 z-50 border-b border-firo-line bg-white/85 text-firo-text backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 md:px-8">
         <a href={homeHref} className="inline-flex items-center" aria-label="Go to main page">
           <Image
             src="/assets/brand/firo-logo.png"
-            alt="FIRO"
+            alt="PeakU"
             width={150}
             height={45}
             priority
@@ -39,32 +38,28 @@ export default function Nav({ locale = "en" }: NavProps) {
           />
         </a>
 
-        <nav className="hidden items-center gap-7 text-sm text-white/70 md:flex">
-          <a href={investorsHref} className="hover:text-white">{isEs ? "Inversionistas" : "Investors"}</a>
-          <a href={aboutHref} className="hover:text-white">{isEs ? "Nosotros" : "About"}</a>
-          <a href={anchorHref("thesis")} className="hover:text-white">{isEs ? "Tesis" : "Thesis"}</a>
-          <a href={anchorHref("roi")} className="hover:text-white">ROI</a>
-          <a href={anchorHref("quote")} className="hover:text-white">{isEs ? "Contacto" : "Contact"}</a>
+        <nav className="hidden items-center gap-7 text-sm text-firo-muted md:flex">
+          <a href={guideHref} className="hover:text-firo-text">{isEs ? "Guia" : "Guide"}</a>
         </nav>
 
         <div className="flex items-center gap-2">
           <a
             href={switchHref}
-            className="rounded-lg px-2 py-1 text-xs text-white/70 hover:text-white"
+            className="rounded-lg px-2 py-1 text-xs text-firo-muted hover:text-firo-text"
           >
             {isEs ? "EN" : "ES"}
           </a>
           <a
-            href={anchorHref("quote")}
+            href={guideHref}
             className="rounded-xl bg-white/10 px-3 py-2 text-sm font-semibold hover:bg-white/15 md:px-4"
           >
-            {isEs ? "Cotizar" : "Get a quote"}
+            {isEs ? "Descargar guia" : "Download guide"}
           </a>
           <a
-            href={anchorHref("quote")}
+            href={guideHref}
             className="rounded-xl bg-firo-blue px-3 py-2 text-sm font-semibold hover:opacity-95 md:px-4"
           >
-            {isEs ? "Hablar con FIRO" : "Talk to FIRO"}
+            {isEs ? "Quiero la guia" : "I want the guide"}
           </a>
         </div>
       </div>

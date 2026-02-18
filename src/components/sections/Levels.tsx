@@ -6,54 +6,54 @@ import { ensureGsap } from "@/lib/gsap";
 
 const levels = [
   {
-    level: "Level 1",
-    title: "Events",
-    earns: "Daily rentals + brand activations",
-    does: "Check-in, wayfinding, guest guidance",
+    level: "Step 1",
+    title: "Signal",
+    earns: "You do the hard diagnostic work",
+    does: "Screening, interviews, and structured notes",
   },
   {
-    level: "Level 2",
-    title: "Venues",
-    earns: "Recurring placements + SLA uptime",
-    does: "Front-of-house flows, info desk, scheduling",
+    level: "Step 2",
+    title: "Recommendation",
+    earns: "You present a candidate with clear rationale",
+    does: "Technical and behavioral evidence, not opinions",
   },
   {
-    level: "Level 3",
-    title: "Hospitality",
-    earns: "Higher utilization windows",
-    does: "Concierge tasks + guided service routines",
+    level: "Step 3",
+    title: "Rejection",
+    earns: "Feedback arrives without structure",
+    does: "\"Not convinced\" with no shared criteria",
   },
   {
-    level: "Level 4",
-    title: "Enterprise",
-    earns: "Fleet contracts + multi-site ops",
-    does: "Compliance, reporting, and fleet control",
+    level: "Step 4",
+    title: "Reprocess",
+    earns: "The process starts again and trust drops",
+    does: "Time lost for recruiter, leader, and candidate",
   },
 ];
 const levelsEs = [
   {
-    level: "Nivel 1",
-    title: "Eventos",
-    earns: "Rentas diarias + activaciones de marca",
-    does: "Check-in, orientacion y guia de asistentes",
+    level: "Paso 1",
+    title: "Senal",
+    earns: "Haces el trabajo de diagnostico mas complejo",
+    does: "Filtro, entrevistas y notas estructuradas",
   },
   {
-    level: "Nivel 2",
-    title: "Recintos",
-    earns: "Colocaciones recurrentes + uptime con SLA",
-    does: "Flujos front-of-house, mesa de informacion, agenda",
+    level: "Paso 2",
+    title: "Recomendacion",
+    earns: "Presentas candidatos con criterio claro",
+    does: "Evidencia tecnica y humana, no opiniones sueltas",
   },
   {
-    level: "Nivel 3",
-    title: "Hospitalidad",
-    earns: "Ventanas de utilizacion mas altas",
-    does: "Tareas de concierge + rutinas de servicio guiadas",
+    level: "Paso 3",
+    title: "Rechazo",
+    earns: "La decision llega sin estructura",
+    does: "\"No me convencio\" sin criterios compartidos",
   },
   {
-    level: "Nivel 4",
-    title: "Empresarial",
-    earns: "Contratos de flota + operacion multi-sede",
-    does: "Cumplimiento, reportes y control de flota",
+    level: "Paso 4",
+    title: "Reproceso",
+    earns: "Se reinicia la seleccion y cae la confianza",
+    does: "Se pierde tiempo para reclutador, lider y candidato",
   },
 ];
 
@@ -90,18 +90,18 @@ export default function Levels({ locale = "en" }: LevelsProps) {
   }, []);
 
   return (
-    <section ref={root} id="levels" className="bg-white py-24">
+    <section ref={root} id="levels" className="bg-firo-bg py-24">
       <Container>
         <div className="grid gap-10 md:grid-cols-2 md:items-start">
           <div className="md:sticky md:top-28">
-            <div className="text-sm font-semibold text-firo-blue">{isEs ? "Niveles" : "Levels"}</div>
+            <div className="text-sm font-semibold text-firo-blue">{isEs ? "Reframe" : "Reframe"}</div>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
-              {isEs ? "Desbloqueo de capacidades." : "Capability unlocks."}
+              {isEs ? "No es un problema de talento. Es un problema de confianza." : "This is not a talent problem. It is a trust problem."}
             </h2>
             <p className="mt-4 text-firo-muted">
               {isEs
-                ? "No empezamos en modo dificil. Comenzamos en entornos controlados, construimos playbooks y luego abrimos nuevos mercados."
-                : "We don’t start on “hard mode”. We start in controlled environments, build playbooks, then unlock new markets."}
+                ? "Las empresas casi nunca cuestionan el proceso. Cuestionan el criterio del reclutador. PeakU introduce evidencia estructurada para que las decisiones de contratacion se sostengan internamente."
+                : "Teams rarely question the process itself. They question the recruiter’s judgment. PeakU adds structured evidence to make hiring decisions defensible."}
             </p>
           </div>
 
@@ -119,8 +119,8 @@ export default function Levels({ locale = "en" }: LevelsProps) {
                 <div className="mt-2 text-xl font-semibold tracking-tight">{l.title}</div>
 
                 <div className="mt-4 grid gap-3 md:grid-cols-2">
-                  <Stat label={isEs ? "Como genera ingresos" : "How it earns"} value={l.earns} />
-                  <Stat label={isEs ? "Que hace" : "What it does"} value={l.does} />
+                  <Stat label={isEs ? "Que ocurre" : "What happens"} value={l.earns} />
+                  <Stat label={isEs ? "Impacto" : "Impact"} value={l.does} />
                 </div>
               </div>
             ))}
