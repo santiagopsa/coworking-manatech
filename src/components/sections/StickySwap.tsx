@@ -5,16 +5,16 @@ import Container from "../ui/Container";
 import { ensureGsap } from "@/lib/gsap";
 
 const cards = [
-  { title: "Complete candidate report", desc: "Every shortlisted profile includes technical results, personality insights, and hiring recommendation." },
-  { title: "Faster shortlisting", desc: "Assessment-backed filtering helps your team spend time only with high-fit candidates." },
-  { title: "Higher decision confidence", desc: "Hiring managers receive objective evidence, not only resumes and opinions." },
-  { title: "Exclusive coworking advantage", desc: "Emprendu companies publish with a differentiated channel to reach top talent." },
+  { title: "Complete candidate intelligence", desc: "Every finalist profile includes technical outcomes, behavioral insights, and a hiring recommendation." },
+  { title: "Faster shortlisting", desc: "Assessment-backed filtering keeps your team focused on high-fit candidates only." },
+  { title: "Higher decision confidence", desc: "Hiring managers get objective signal, not just resumes and gut feeling." },
+  { title: "Exclusive coworking advantage", desc: "Manatech companies publish through a differentiated channel to attract specialized LatAm talent." },
 ];
 const cardsEs = [
   { title: "Reporte completo por candidato", desc: "Cada perfil preseleccionado incluye resultados tecnicos, rasgos de personalidad y recomendacion." },
   { title: "Preseleccion mas rapida", desc: "El filtrado con evaluaciones permite enfocar entrevistas en perfiles de mayor ajuste." },
   { title: "Decisiones con mas certeza", desc: "Los lideres reciben evidencia objetiva para decidir con seguridad." },
-  { title: "Ventaja exclusiva para Emprendu", desc: "Las empresas del Coworking publican en un canal diferenciado para atraer mejor talento." },
+  { title: "Ventaja exclusiva para Manatech", desc: "Las empresas del Coworking publican en un canal diferenciado para atraer mejor talento." },
 ];
 
 type StickySwapProps = {
@@ -58,14 +58,14 @@ export default function StickySwap({ locale = "en" }: StickySwapProps) {
       <Container>
         <div className="grid gap-10 md:grid-cols-2">
           <div className="md:sticky md:top-24 md:h-fit">
-            <div className="text-sm font-semibold text-black">{isEs ? "Resultados esperados" : "Expected outcomes"}</div>
+            <div className="text-sm font-semibold text-[#38F9A5]">{isEs ? "Resultados esperados" : "Expected outcomes"}</div>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
-              {isEs ? "Lo que obtiene tu equipo al publicar con PeakU desde Emprendu" : "What your team gets by posting through Emprendu"}
+              {isEs ? "Lo que obtiene tu equipo al publicar con PeakU desde Manatech" : "What your team unlocks with PeakU through Manatech"}
             </h2>
             <p className="mt-4 max-w-lg text-firo-muted">
               {isEs
                 ? "No es solo volumen de postulaciones. Es calidad de filtro y claridad para tomar decisiones de contratacion."
-                : "It is not just higher applicant volume. It is better filtering and clear evidence for final hiring decisions."}
+                : "This is not just more applicants. It is better screening and decision-ready evidence for specialized LatAm hiring."}
             </p>
           </div>
 
@@ -74,7 +74,7 @@ export default function StickySwap({ locale = "en" }: StickySwapProps) {
               <div
                 key={c.title}
                 data-swap-item
-                className="rounded-2xl border border-firo-line bg-white p-6 shadow-soft"
+                className="rounded-2xl border border-firo-line bg-[#0B0B0B] p-6 shadow-soft"
               >
                 <div className="text-lg font-semibold">{c.title}</div>
                 <div className="mt-2 text-firo-muted">{c.desc}</div>

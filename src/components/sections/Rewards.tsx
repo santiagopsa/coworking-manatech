@@ -12,14 +12,14 @@ export default function Rewards({ locale = "en" }: RewardsProps) {
       <Container>
         <div className="grid gap-10 md:grid-cols-2 md:items-center">
           <div>
-            <div className="text-sm font-semibold text-black">{isEs ? "Alianza Emprendu + PeakU" : "Emprendu + PeakU partnership"}</div>
+            <div className="text-sm font-semibold text-[#5CA1F3]">{isEs ? "Alianza Manatech + PeakU" : "Manatech + PeakU partnership"}</div>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
-              {isEs ? "Una pagina QR para activar vacantes de alto impacto" : "A QR landing page to launch high-impact hiring"}
+              {isEs ? "Una pagina QR para activar vacantes de alto impacto" : "A QR-powered funnel for high-impact hiring"}
             </h2>
             <p className="mt-4 text-firo-muted">
               {isEs
-                ? "Este QR conecta a la comunidad de Emprendu con una ruta de publicacion exclusiva: mas alcance, mejores filtros y reportes claros para contratar mejor."
-                : "This QR connects Emprendu's community with an exclusive publishing route: wider reach, stronger filtering, and clear decision-ready reports."}
+                ? "Este QR conecta a la comunidad de Manatech con una ruta de publicacion exclusiva: mas alcance, mejores filtros y reportes claros para contratar mejor."
+                : "This QR route gives Manatech companies an exclusive channel to hire specialized LatAm talent, from software developers to bilingual sales executives."}
             </p>
 
             <div className="mt-8 grid gap-3 md:grid-cols-3">
@@ -30,7 +30,7 @@ export default function Rewards({ locale = "en" }: RewardsProps) {
           </div>
 
           <div className="relative">
-            <div className="absolute -inset-10 rounded-[40px] bg-firo-blue/15 blur-3xl" />
+            <div className="absolute -inset-10 rounded-[40px] bg-[#5CA1F3]/20 blur-3xl" />
             <Image
               src="/assets/hero/dashboard.png"
               alt="PeakU dashboard"
@@ -48,7 +48,7 @@ export default function Rewards({ locale = "en" }: RewardsProps) {
 
 function Loot({ title, value }: { title: string; value: string }) {
   return (
-    <div className="rounded-2xl border border-firo-line bg-white p-5">
+    <div className="rounded-2xl border border-firo-line bg-[#0B0B0B] p-5">
       <div className="text-xs font-semibold text-firo-muted">{title}</div>
       <div className="mt-2 text-xl font-semibold">{value}</div>
     </div>

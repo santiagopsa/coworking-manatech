@@ -8,16 +8,16 @@ import Rewards from "@/components/sections/Rewards";
 import Join from "@/components/sections/Join";
 
 export const metadata: Metadata = {
-  title: "Emprendu x PeakU | Publica ofertas con acceso a talento top",
+  title: "Manatech x PeakU | Hire Better, Move Faster",
   description:
-    "Landing QR para la comunidad de Emprendu: publica vacantes con acceso a la base de talento especializado de PeakU, pruebas tecnicas y reportes por candidato.",
+    "Exclusive hiring lane for Manatech companies: hire specialized LatAm talent like software developers and bilingual sales executives with stronger screening and clearer decisions.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Emprendu x PeakU | Contrata mejor desde tu Coworking",
+    title: "Manatech x PeakU | Exclusive Hiring Access for Manatech",
     description:
-      "Acceso exclusivo para empresas de Emprendu: mas de 200 aplicaciones por oferta, filtrado guiado y reportes completos por candidato.",
+      "Post roles through Manatech and connect with specialized LatAm talent, including software developers and bilingual sales executives, plus decision-ready candidate reports.",
     url: "/",
     images: [
       {
