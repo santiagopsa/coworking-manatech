@@ -96,7 +96,7 @@ export default function VideoHero({ locale = "en" }: VideoHeroProps) {
                 </>
               ) : (
                 <>
-                  Stop hiring blind. Launch your role through Manatech and get
+                  Stop hiring blind. Launch your opening through Manatech and get
                   <span className="text-[#38F9A5] drop-shadow-[0_0_22px_rgba(56,249,165,.45)]">
                     {" "}specialized LatAm talent that moves the needle.
                   </span>
@@ -115,13 +115,13 @@ export default function VideoHero({ locale = "en" }: VideoHeroProps) {
                 href="#join"
                 className="rounded-xl bg-[#38F9A5] px-5 py-3 text-sm font-semibold text-black shadow-soft transition hover:brightness-95"
               >
-                {isEs ? "Publicar oferta en PeakU" : "Launch your role on PeakU"}
+                {isEs ? "Publicar oferta en PeakU" : "Launch your opening on PeakU"}
               </a>
             </div>
 
             <div className="mt-8 grid max-w-2xl grid-cols-1 gap-3 text-sm md:grid-cols-3">
               <div className="rounded-xl border border-firo-line bg-[#0B0B0B]/90 p-3">
-                <div className="text-firo-muted">{isEs ? "Aplicaciones por vacante" : "Applications per role"}</div>
+                <div className="text-firo-muted">{isEs ? "Aplicaciones por vacante" : "Applications per opening"}</div>
                 <div className="mt-1 text-xl font-semibold text-firo-text">+<span data-counter>0</span></div>
               </div>
               <div className="rounded-xl border border-firo-line bg-[#0B0B0B]/90 p-3">

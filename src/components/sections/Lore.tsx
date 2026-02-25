@@ -45,7 +45,7 @@ export default function Lore({ locale = "en" }: LoreProps) {
           <h2 data-reveal className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
             {isEs
               ? "Publica una vacante con ventaja real desde tu Coworking."
-              : "Post open roles with a real hiring edge."}
+              : "Post openings with a real hiring edge."}
           </h2>
           <p data-reveal className="mt-4 text-firo-muted">
             {isEs
@@ -56,10 +56,10 @@ export default function Lore({ locale = "en" }: LoreProps) {
           <div className="mt-10 grid gap-4 md:grid-cols-3">
             <Card
               title={isEs ? "Acceso a talento especializado" : "Specialized talent, at scale"}
-              desc={isEs ? "Conecta con talento especializado en LatAm para roles criticos de tecnologia y crecimiento." : "Connect with specialized LatAm talent for critical tech and revenue roles."}
+              desc={isEs ? "Conecta con talento especializado en LatAm para posiciones criticas de tecnologia y crecimiento." : "Connect with specialized LatAm talent for critical tech and revenue positions."}
             />
             <Card
-              title={isEs ? "Mas de 200 aplicaciones" : "200+ applications per role"}
+              title={isEs ? "Mas de 200 aplicaciones" : "200+ applications per opening"}
               desc={isEs ? "Cada publicacion recibe alto volumen para elegir entre los mejores perfiles." : "Build serious pipeline fast without sacrificing candidate quality."}
             />
             <Card

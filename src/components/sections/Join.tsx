@@ -12,7 +12,7 @@ export default function Join({ locale = "en" }: JoinProps) {
         <div className="rounded-3xl border border-firo-line bg-firo-bg p-8 shadow-soft md:p-10">
           <div className="grid gap-8 md:grid-cols-2 md:items-start">
             <div>
-              <div className="text-sm font-semibold text-[#38F9A5]">{isEs ? "Publica tu vacante" : "Launch your role"}</div>
+              <div className="text-sm font-semibold text-[#38F9A5]">{isEs ? "Publica tu vacante" : "Start your hiring search"}</div>
               <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
                 {isEs
                   ? "Acceso exclusivo para empresas de Manatech"
@@ -21,7 +21,7 @@ export default function Join({ locale = "en" }: JoinProps) {
               <p className="mt-3 text-firo-muted">
                 {isEs
                   ? "Completa este formulario y nuestro equipo te contacta para activar tu publicacion, pruebas de filtrado y reportes por candidato."
-                  : "Fill out the form and our team will activate your role to reach specialized LatAm talent, including software developers and bilingual sales executives."}
+                  : "Fill out the form and our team will activate your opening to reach specialized LatAm talent, including software developers and bilingual sales executives."}
               </p>
             </div>
 
@@ -77,7 +77,7 @@ export default function Join({ locale = "en" }: JoinProps) {
 
                 <div>
                   <label className="mb-1 block text-sm font-medium text-firo-text" htmlFor="vacancy">
-                    {isEs ? "Cargo a publicar" : "Role to publish"}
+                    {isEs ? "Cargo a publicar" : "Opening to publish"}
                   </label>
                   <input
                     id="vacancy"
@@ -92,7 +92,7 @@ export default function Join({ locale = "en" }: JoinProps) {
                   type="submit"
                   className="w-full rounded-xl bg-[#38F9A5] px-5 py-3 text-sm font-semibold text-black transition hover:brightness-95"
                 >
-                  {isEs ? "Publicar oferta en PeakU" : "Launch your role on PeakU"}
+                  {isEs ? "Publicar oferta en PeakU" : "Launch your opening on PeakU"}
                 </button>
               </form>
             </div>

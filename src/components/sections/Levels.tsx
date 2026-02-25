@@ -7,7 +7,7 @@ import { ensureGsap } from "@/lib/gsap";
 const levels = [
   {
     level: "Step 1",
-    title: "Launch your role",
+    title: "Launch your opening",
     earns: "Publish through Manatech in minutes",
     does: "Access an exclusive hiring lane built for coworking members",
   },
@@ -101,7 +101,7 @@ export default function Levels({ locale = "en" }: LevelsProps) {
             <p className="mt-4 text-firo-muted">
               {isEs
                 ? "Combinamos alcance, evaluacion y analitica para que cada vacante se convierta en una contratacion mejor respaldada."
-                : "We combine reach, assessments, and reporting so every role turns into a smarter, faster decision for specialized LatAm hiring."}
+                : "We combine reach, assessments, and reporting so every opening turns into a smarter, faster decision for specialized LatAm hiring."}
             </p>
           </div>
 

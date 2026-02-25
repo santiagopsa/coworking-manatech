@@ -14,12 +14,12 @@ export default function Rewards({ locale = "en" }: RewardsProps) {
           <div>
             <div className="text-sm font-semibold text-[#5CA1F3]">{isEs ? "Alianza Manatech + PeakU" : "Manatech + PeakU partnership"}</div>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
-              {isEs ? "Una pagina QR para activar vacantes de alto impacto" : "A QR-powered funnel for high-impact hiring"}
+              {isEs ? "Toda la informacion para decidir mejor, en un solo sistema" : "All applicant intelligence in one AI-powered system"}
             </h2>
             <p className="mt-4 text-firo-muted">
               {isEs
-                ? "Este QR conecta a la comunidad de Manatech con una ruta de publicacion exclusiva: mas alcance, mejores filtros y reportes claros para contratar mejor."
-                : "This QR route gives Manatech companies an exclusive channel to hire specialized LatAm talent, from software developers to bilingual sales executives."}
+                ? "Tu equipo accede a la informacion completa de cada aplicante, resultados de pruebas tecnicas y de personalidad, y un sistema con IA que clasifica y recomienda a los mejores candidatos."
+                : "Your team gets complete applicant profiles, technical and behavioral assessment results, and an AI system that ranks and recommends the strongest candidates."}
             </p>
 
             <div className="mt-8 grid gap-3 md:grid-cols-3">

@@ -56,7 +56,7 @@ export default function Nav({ locale = "en" }: NavProps) {
             href={joinHref}
             className="rounded-xl bg-[#38F9A5] px-3 py-2 text-sm font-semibold text-black transition hover:brightness-95 md:px-4"
           >
-            {isEs ? "Publicar oferta en PeakU" : "Launch a role on PeakU"}
+            {isEs ? "Publicar oferta en PeakU" : "Start hiring on PeakU"}
           </a>
         </div>
       </div>

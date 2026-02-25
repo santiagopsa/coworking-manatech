@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Manatech x PeakU | Exclusive Hiring Access for Manatech",
     description:
-      "Post roles through Manatech and connect with specialized LatAm talent, including software developers and bilingual sales executives, plus decision-ready candidate reports.",
+      "Post openings through Manatech and connect with specialized LatAm talent, including software developers and bilingual sales executives, plus decision-ready candidate reports.",
     url: "/",
     images: [
       {
