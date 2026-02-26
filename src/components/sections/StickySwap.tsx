@@ -8,13 +8,13 @@ const cards = [
   { title: "Complete candidate intelligence", desc: "Every finalist profile includes technical outcomes, behavioral insights, and a hiring recommendation." },
   { title: "Faster shortlisting", desc: "Assessment-backed filtering keeps your team focused on high-fit candidates only." },
   { title: "Higher decision confidence", desc: "Hiring managers get objective signal, not just resumes and gut feeling." },
-  { title: "Exclusive coworking advantage", desc: "Manatech companies publish through a differentiated channel to attract specialized LatAm talent." },
+  { title: "Exclusive community advantage", desc: "Manatech companies publish through a differentiated channel to attract specialized LatAm talent." },
 ];
 const cardsEs = [
   { title: "Reporte completo por candidato", desc: "Cada perfil preseleccionado incluye resultados tecnicos, rasgos de personalidad y recomendacion." },
   { title: "Preseleccion mas rapida", desc: "El filtrado con evaluaciones permite enfocar entrevistas en perfiles de mayor ajuste." },
   { title: "Decisiones con mas certeza", desc: "Los lideres reciben evidencia objetiva para decidir con seguridad." },
-  { title: "Ventaja exclusiva para Manatech", desc: "Las empresas del Coworking publican en un canal diferenciado para atraer mejor talento." },
+  { title: "Ventaja exclusiva para Manatech", desc: "Las empresas de la comunidad Manatech publican en un canal diferenciado para atraer mejor talento." },
 ];
 
 type StickySwapProps = {

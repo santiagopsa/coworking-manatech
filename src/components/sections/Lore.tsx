@@ -44,7 +44,7 @@ export default function Lore({ locale = "en" }: LoreProps) {
           </div>
           <h2 data-reveal className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
             {isEs
-              ? "Publica una vacante con ventaja real desde tu Coworking."
+              ? "Publica una vacante con ventaja real desde tu comunidad tech."
               : "Post openings with a real hiring edge."}
           </h2>
           <p data-reveal className="mt-4 text-firo-muted">

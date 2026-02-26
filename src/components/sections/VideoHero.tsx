@@ -83,7 +83,7 @@ export default function VideoHero({ locale = "en" }: VideoHeroProps) {
             </div>
             <div className="inline-flex items-center gap-2 rounded-full border border-firo-line bg-black/70 px-4 py-2 text-sm text-firo-text">
               <span className="h-2 w-2 rounded-full bg-[#38F9A5]" />
-              {isEs ? "PeakU + Manatech Coworking" : "PeakU + Manatech Coworking"}
+              {isEs ? "PeakU + Comunidad tech LatAm Manatech (base Miami)" : "PeakU + Manatech LatAm tech community (Miami-based)"}
             </div>
 
             <h1 className="mt-6 text-4xl font-semibold tracking-tight md:text-6xl">

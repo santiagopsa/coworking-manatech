@@ -10,14 +10,14 @@ import Join from "@/components/sections/Join";
 export const metadata: Metadata = {
   title: "Manatech x PeakU | Hire Better, Move Faster",
   description:
-    "Exclusive hiring lane for Manatech companies: hire specialized LatAm talent like software developers and bilingual sales executives with stronger screening and clearer decisions.",
+    "Exclusive hiring lane for the Manatech LatAm tech community, based in Miami: hire specialized talent like software developers and bilingual sales executives with stronger screening and clearer decisions.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
     title: "Manatech x PeakU | Exclusive Hiring Access for Manatech",
     description:
-      "Post openings through Manatech and connect with specialized LatAm talent, including software developers and bilingual sales executives, plus decision-ready candidate reports.",
+      "Post openings through Manatech's Miami-based LatAm tech community and connect with specialized talent, including software developers and bilingual sales executives, plus decision-ready candidate reports.",
     url: "/",
     images: [
       {

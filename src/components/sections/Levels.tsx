@@ -9,7 +9,7 @@ const levels = [
     level: "Step 1",
     title: "Launch your opening",
     earns: "Publish through Manatech in minutes",
-    does: "Access an exclusive hiring lane built for coworking members",
+    does: "Access an exclusive hiring lane for the Manatech LatAm tech community",
   },
   {
     level: "Step 2",
@@ -35,7 +35,7 @@ const levelsEs = [
     level: "Paso 1",
     title: "Publica tu oferta",
     earns: "Subes tu vacante desde Manatech",
-    does: "Acceso exclusivo para la comunidad del Coworking",
+    does: "Acceso exclusivo para la comunidad tech LatAm de Manatech",
   },
   {
     level: "Paso 2",
