@@ -8,17 +8,17 @@ import Rewards from "@/components/sections/Rewards";
 import Join from "@/components/sections/Join";
 
 export const metadata: Metadata = {
-  title: "Manatech x PeakU | Contrata talento especializado en LatAm",
+  title: "Mana Tech x PeakU | Contrata talento especializado en LatAm",
   description:
-    "Ruta exclusiva para la comunidad tech LatAm de Manatech, con base en Miami: encuentra talento especializado como desarrolladores de software y ejecutivos comerciales bilingues, con mejor filtrado y decisiones mas claras.",
+    "Ruta exclusiva para la comunidad tech LatAm de Mana Tech, con base en Miami: encuentra talento especializado como desarrolladores de software y ejecutivos comerciales bilingues, con mejor filtrado y decisiones mas claras.",
   alternates: {
     canonical: "/es",
   },
   openGraph: {
     locale: "es_ES",
-    title: "Manatech x PeakU | Acceso exclusivo a talento especializado",
+    title: "Mana Tech x PeakU | Acceso exclusivo a talento especializado",
     description:
-      "Publica vacantes desde la comunidad tech LatAm de Manatech (base Miami) y conecta con talento especializado, incluyendo developers de software y ejecutivos comerciales bilingues, con reportes por candidato.",
+      "Publica vacantes desde la comunidad tech LatAm de Mana Tech (base Miami) y conecta con talento especializado, incluyendo developers de software y ejecutivos comerciales bilingues, con reportes por candidato.",
     url: "/es",
     images: [
       {

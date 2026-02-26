@@ -12,7 +12,7 @@ export default function Rewards({ locale = "en" }: RewardsProps) {
       <Container>
         <div className="grid gap-10 md:grid-cols-2 md:items-center">
           <div>
-            <div className="text-sm font-semibold text-[#5CA1F3]">{isEs ? "Alianza Manatech + PeakU" : "Manatech + PeakU partnership"}</div>
+            <div className="text-sm font-semibold text-[#5CA1F3]">{isEs ? "Alianza Mana Tech + PeakU" : "Mana Tech + PeakU partnership"}</div>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
               {isEs ? "Toda la informacion para decidir mejor, en un solo sistema" : "All applicant intelligence in one AI-powered system"}
             </h2>

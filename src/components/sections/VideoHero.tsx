@@ -83,20 +83,20 @@ export default function VideoHero({ locale = "en" }: VideoHeroProps) {
             </div>
             <div className="inline-flex items-center gap-2 rounded-full border border-firo-line bg-black/70 px-4 py-2 text-sm text-firo-text">
               <span className="h-2 w-2 rounded-full bg-[#38F9A5]" />
-              {isEs ? "PeakU + Comunidad tech LatAm Manatech (base Miami)" : "PeakU + Manatech LatAm tech community (Miami-based)"}
+              {isEs ? "PeakU + Comunidad tech LatAm Mana Tech (base Miami)" : "PeakU + Mana Tech LatAm tech community (Miami-based)"}
             </div>
 
             <h1 className="mt-6 text-4xl font-semibold tracking-tight md:text-6xl">
               {isEs ? (
                 <>
-                  Publica tu vacante desde Manatech y recibe
+                  Publica tu vacante desde Mana Tech y recibe
                   <span className="text-[#38F9A5] drop-shadow-[0_0_22px_rgba(56,249,165,.45)]">
                     {" "}talento especializado de alto nivel.
                   </span>
                 </>
               ) : (
                 <>
-                  Stop hiring blind. Launch your opening through Manatech and get
+                  Stop hiring blind. Launch your opening through Mana Tech and get
                   <span className="text-[#38F9A5] drop-shadow-[0_0_22px_rgba(56,249,165,.45)]">
                     {" "}specialized LatAm talent that moves the needle.
                   </span>
@@ -106,8 +106,8 @@ export default function VideoHero({ locale = "en" }: VideoHeroProps) {
 
             <p className="mt-5 max-w-xl text-base leading-relaxed text-firo-muted md:text-lg">
               {isEs
-                ? "PeakU conecta a empresas de Manatech con talento especializado en LatAm, desde desarrolladores de software hasta ejecutivos comerciales bilingues, con mejor filtrado y reportes por candidato."
-                : "PeakU gives Manatech companies privileged access to specialized LatAm talent, from software developers to bilingual sales executives, with stronger screening and decision-ready candidate reports."}
+                ? "PeakU conecta a empresas de Mana Tech con talento especializado en LatAm, desde desarrolladores de software hasta ejecutivos comerciales bilingues, con mejor filtrado y reportes por candidato."
+                : "PeakU gives Mana Tech companies privileged access to specialized LatAm talent, from software developers to bilingual sales executives, with stronger screening and decision-ready candidate reports."}
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">

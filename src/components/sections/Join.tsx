@@ -15,8 +15,8 @@ export default function Join({ locale = "en" }: JoinProps) {
               <div className="text-sm font-semibold text-[#38F9A5]">{isEs ? "Publica tu vacante" : "Start your hiring search"}</div>
               <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
                 {isEs
-                  ? "Acceso exclusivo para empresas de Manatech"
-                  : "Exclusive hiring access for Manatech companies"}
+                  ? "Acceso exclusivo para empresas de Mana Tech"
+                  : "Exclusive hiring access for Mana Tech companies"}
               </h2>
               <p className="mt-3 text-firo-muted">
                 {isEs
@@ -31,7 +31,7 @@ export default function Join({ locale = "en" }: JoinProps) {
                 method="POST"
                 className="space-y-4"
               >
-                <input type="hidden" name="_subject" value="Manatech - solicitud para publicar vacante" />
+                <input type="hidden" name="_subject" value="Mana Tech - solicitud para publicar vacante" />
                 <input type="hidden" name="_captcha" value="false" />
                 <input type="hidden" name="_template" value="table" />
 

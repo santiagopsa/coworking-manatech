@@ -8,8 +8,8 @@ const levels = [
   {
     level: "Step 1",
     title: "Launch your opening",
-    earns: "Publish through Manatech in minutes",
-    does: "Access an exclusive hiring lane for the Manatech LatAm tech community",
+    earns: "Publish through Mana Tech in minutes",
+    does: "Access an exclusive hiring lane for the Mana Tech LatAm tech community",
   },
   {
     level: "Step 2",
@@ -34,8 +34,8 @@ const levelsEs = [
   {
     level: "Paso 1",
     title: "Publica tu oferta",
-    earns: "Subes tu vacante desde Manatech",
-    does: "Acceso exclusivo para la comunidad tech LatAm de Manatech",
+    earns: "Subes tu vacante desde Mana Tech",
+    does: "Acceso exclusivo para la comunidad tech LatAm de Mana Tech",
   },
   {
     level: "Paso 2",
@@ -96,7 +96,7 @@ export default function Levels({ locale = "en" }: LevelsProps) {
           <div className="md:sticky md:top-28">
             <div className="text-sm font-semibold text-[#5CA1F3]">{isEs ? "Proceso" : "Process"}</div>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
-              {isEs ? "Asi funciona la seleccion para empresas de Manatech" : "How Manatech companies hire faster"}
+              {isEs ? "Asi funciona la seleccion para empresas de Mana Tech" : "How Mana Tech companies hire faster"}
             </h2>
             <p className="mt-4 text-firo-muted">
               {isEs

@@ -40,7 +40,7 @@ export default function Lore({ locale = "en" }: LoreProps) {
       <Container>
         <div className="max-w-3xl">
           <div data-reveal className="text-sm font-semibold text-[#38F9A5]">
-            {isEs ? "Beneficios para la comunidad Manatech" : "Benefits for Manatech community"}
+            {isEs ? "Beneficios para la comunidad Mana Tech" : "Benefits for Mana Tech community"}
           </div>
           <h2 data-reveal className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
             {isEs
@@ -49,8 +49,8 @@ export default function Lore({ locale = "en" }: LoreProps) {
           </h2>
           <p data-reveal className="mt-4 text-firo-muted">
             {isEs
-              ? "Manatech ofrece acceso exclusivo a PeakU para atraer talento especializado en LatAm, incluyendo developers de software y ejecutivos comerciales bilingues."
-              : "Manatech companies get an exclusive lane into PeakU to hire specialized LatAm talent, including software developers and bilingual sales executives."}
+              ? "Mana Tech ofrece acceso exclusivo a PeakU para atraer talento especializado en LatAm, incluyendo developers de software y ejecutivos comerciales bilingues."
+              : "Mana Tech companies get an exclusive lane into PeakU to hire specialized LatAm talent, including software developers and bilingual sales executives."}
           </p>
 
           <div className="mt-10 grid gap-4 md:grid-cols-3">
